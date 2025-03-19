@@ -1,4 +1,4 @@
-async function(properties, context, callback) {
+async function(properties, context) {
   const axios = require('axios');
   const pdf = require('pdf-parse');
 
