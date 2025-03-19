@@ -1,4 +1,6 @@
 {
     "image": "//meta-q.cdn.bubble.io/f1742413740807x219815840289479650/pdf%20%282%29.png",
-    "name": "PDF Parser"
+    "license": "open_source",
+    "name": "PDF Parser",
+    "sa_node_version": 18
 }

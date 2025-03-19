@@ -10,5 +10,26 @@
             "value": "text"
         }
     },
-    "type": "client_side_web"
+    "return_value": {
+        "AAE": {
+            "caption": "text",
+            "name": "text",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAF": {
+            "caption": "info",
+            "name": "info",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAG": {
+            "caption": "error",
+            "name": "error",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": true
 }
