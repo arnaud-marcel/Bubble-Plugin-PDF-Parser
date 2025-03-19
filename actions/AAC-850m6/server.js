@@ -31,27 +31,27 @@ async function(properties, context) {
   // Fonction principale pour télécharger et extraire le texte du PDF
   async function extractTextFromPDF(pdfUrl) {
     try {
-      // Vérifier et corriger l'URL si nécessaire
       const validUrl = sanitizeUrl(pdfUrl);
-      // Télécharger le PDF
       const response = await axios.get(validUrl, { responseType: 'arraybuffer' });
       const pdfBuffer = Buffer.from(response.data, 'binary');
-
-      // Extraction du texte avec pdf-parse
       return await extractTextWithPdfParse(pdfBuffer);
     } catch (error) {
       return { success: false, text: '', info: `Erreur globale : ${error.message}` };
     }
   }
 
-  // Exécution de l'extraction
-  try {
-    let pdfUrl = properties.pdf; // URL du PDF fourni dans les propriétés
-    const result = await extractTextFromPDF(pdfUrl);
-    return result.success 
-      ? { text: result.text, info: result.info } 
-      : { error: result.info };
-  } catch (error) {
-    return { error: 'Erreur lors de l\'extraction : ' + error.message };
+  // Définition de la fonction run_server exécutée lors de l'action dans le workflow
+  async function run_server(properties, context) {
+    try {
+      const pdfUrl = properties.pdf; // URL du PDF fourni dans les propriétés
+      const result = await extractTextFromPDF(pdfUrl);
+      return result.success 
+        ? { text: result.text, info: result.info } 
+        : { error: result.info };
+    } catch (error) {
+      return { error: 'Erreur lors de l\'extraction : ' + error.message };
+    }
   }
+
+  return run_server(properties, context);
 }
