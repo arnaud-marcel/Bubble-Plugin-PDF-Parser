@@ -3,9 +3,9 @@
     "display": "pdf-parser",
     "fields": {
         "AAD": {
-            "caption": "text",
+            "caption": "pdf",
             "editor": "DynamicValue",
-            "name": "text",
+            "name": "pdf",
             "rank": 0,
             "value": "text"
         }
