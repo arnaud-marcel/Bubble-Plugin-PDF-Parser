@@ -1,0 +1,35 @@
+{
+    "category": "plugins",
+    "display": "pdf-parser",
+    "fields": {
+        "AAD": {
+            "caption": "pdf",
+            "editor": "DynamicValue",
+            "name": "pdf",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AAE": {
+            "caption": "text",
+            "name": "text",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAF": {
+            "caption": "info",
+            "name": "info",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAG": {
+            "caption": "error",
+            "name": "error",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": true
+}
