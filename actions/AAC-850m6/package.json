@@ -1,6 +1,0 @@
-{
-    "dependencies": {
-        "axios": "latest",
-        "pdf-parse": "latest"
-    }
-}
